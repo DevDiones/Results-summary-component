@@ -190,6 +190,11 @@ body{
     border: none;
     color: var(--White);
 }
+
+.cta:active, .cta:hover{
+    background: linear-gradient(to bottom,var(--Light-slate-blue), var(--Light-royal-blue));
+}
+
 .attribution { 
     font-size: 11px;
     text-align: center;
