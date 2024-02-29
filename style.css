@@ -1,0 +1,251 @@
+@font-face {
+    font-family: "Hanken";
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+:root{
+    /* Colors */
+
+    /* Primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --Light-redbg: hsl(0, 62%, 91%);
+    --Orangey-yellowbg: hsl(41, 57%, 88%);
+    --Green-tealbg: hsl(164, 75%, 86%);
+    --Cobalt-bluebg: hsl(233, 56%, 87%);
+
+    /* Gradients */
+    --Light-slate-blue : hsl(252, 100%, 67%); /*(background)*/
+    --Light-royal-blue: hsl(241, 81%, 54%);/*(background)*/
+    --Violet-blue : hsla(256, 72%, 46%, 1); /*(circle)*/
+    --Persian-blue: hsla(241, 72%, 46%, 0);/*(circle)*/
+
+
+
+    /* Neutral */ 
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--White);
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    font-family: "Hanken", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.component{
+    display: flex;
+    height: 500px;
+    width: 650px;
+    box-shadow: 0px 10px 20px 12px var(--Pale-blue); 
+    border-radius: 20px;
+}
+
+.left-container{
+    color: var(--White);
+    background: linear-gradient(to bottom,var(--Light-slate-blue), var(--Light-royal-blue));
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    width: 48%;
+}
+
+.title{
+    font-size: 25px;
+}
+.score{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,var(--Violet-blue), var(--Persian-blue));
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+}
+
+.total-score{
+    font-size: 50px;
+    margin: 0;
+}
+
+.no-of-items{
+    margin: 0;
+}
+
+.description{
+    text-align: center;
+}
+
+
+.right-container{
+    width: 57%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    /* justify-content: space-between; */
+}
+
+.summary{
+    font-size: 25px;
+    color: var(--Dark-gray-blue);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.category{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.item{
+    display: flex;
+}
+.category-item-reaction{
+    height: 50px;
+    background-color: var(--Light-redbg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    .category-name{
+        color: var(--Light-red);
+        margin-left: 10px;
+    }
+}
+.category-item-memory{
+    height: 50px;
+    background-color: var(--Orangey-yellowbg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    .category-name{
+        color: var(--Orangey-yellow);
+        margin-left: 10px;
+    }
+}
+.category-item-verbal{
+    height: 50px;
+    background-color: var(--Green-tealbg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    .category-name{
+        color: var(--Green-teal);
+        margin-left: 10px;
+    }
+}
+.category-item-visual{
+    height: 50px;
+    background-color: var(--Cobalt-bluebg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    .category-name{
+        color: var(--Cobalt-blue);
+        margin-left: 10px;
+    }
+}
+.score-value{
+    font-weight: 700;
+}
+
+
+.cta{
+    height: 55px;
+    font-size: 18px;
+    border-radius: 50px;
+    background-color: var(--Dark-gray-blue);
+    border: none;
+    color: var(--White);
+}
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    height: 10vh;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen and (max-width: 500px) {
+
+    .wrapper{
+        height: 120vh;
+    }
+
+    .attribution{
+        height: 5vh;
+    }
+    .component{
+        flex-direction: column;
+        height: 120vh;
+       
+    }
+
+    .left-container{
+        width: 100%;
+        height: 50vh;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .right-container{
+        width: 100%;
+        height: 80vh;
+        padding: 20px 40px;
+    }
+
+    .category{
+        margin-bottom: 20px;
+    }
+
+    /* .category-item-memory{
+        height: 55px;
+    }
+
+    .category-item-reaction{
+        height: 40px;
+    }
+
+    .category-item-verbal{
+        height: 55px;
+    }
+
+    .category-item-visual{
+        height: 55px;
+    } */
+    /* .cta{
+        height: 70px;
+    } */
+}
